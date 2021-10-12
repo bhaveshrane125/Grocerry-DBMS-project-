@@ -1,0 +1,60 @@
+/* body{
+    background-color: beige;
+} */
+
+body{
+    text-align: center;
+    background-color: whitesmoke;
+}
+
+.heading{
+    margin-top:50px ;
+    background-color: #212529;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    max-width: 1200px;
+    box-shadow: 
+    0 0 7px rgb(165, 164, 164),
+    0 0 10px grey,
+    0 0 20px grey;
+  
+
+    
+}
+
+.white_card{
+    background-color: whitesmoke;
+    /* background-image: url('../img/bg.jpg'); */
+    border-radius: 10px;
+    padding-top: 10px;
+}
+
+.container{
+    border-radius: 20px;
+}
+
+.borders{
+    border-bottom: 1px solid rgb(202, 202, 202);
+    margin-bottom: 10px;
+        
+}
+
+
+h2{
+
+    font-weight: 800;
+    color: #FE585E;
+    border-bottom: 1px solid #FE585E;
+}
+
+
+
+#add_product{
+    border-radius: 10px;
+    margin-left: 400px;
+    margin-bottom: 10px;
+}
+
+

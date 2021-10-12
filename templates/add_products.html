@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+
+
+
+{% block body %}
+
+<link rel="stylesheet" href=" {{ url_for('static', filename= 'css/add_product.css') }} ">
+
+
+
+<div class="container card">
+    <div class="d-flex flex-row heading" style="justify-content: center;">
+        <h3> Add Product </h3>
+    </div>
+    <form action="#" method="post" id="add_product">
+        <form class="form-group form_entry">
+            <label for="product_name">Product Name</label>
+            <input type="text" class="form-control" id="product_name" placeholder="Enter Product Name">
+        </form>
+        <form class="form-group form_entry">
+            <label for="price">Price per Unit</label>
+            <input type="number" class="form-control" id="price" placeholder="Enter Price Per Unit">
+        </form>
+        <div class="btn form_entry">
+            <label class="form-group">Unit</label>
+            <form class="form-group" id="unit_id">
+
+                {% for i in data %}
+                <input type="radio" name="unit" value={{ i['u_id'] }} checked>
+                <label> {{ i['unit_name'] }} </label>
+                {% endfor %}
+
+            </form>
+        </div>
+
+        <div class="form-group btn">
+            <button id="submit_btn" class="btn btn-success" type="submit" onclick="add_product()">Submit</button>
+        </div>
+    </form>
+
+</div>
+
+<div class="container back ">
+    <div class="d-flex flex-row-reverse">
+        <a href="/manage_products"> Back </a>
+    </div>
+</div>
+
+<script src="../static/javascript/add_product.js"></script>
+{% endblock %}

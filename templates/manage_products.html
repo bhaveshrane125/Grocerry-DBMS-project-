@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block links %}
+    <a href="/"> Home </a>
+    <a href="/create_order"> Order </a>
+{% endblock %}
+
+
+{% block body %}
+<link rel="stylesheet" href=" {{ url_for('static', filename= 'css/manage.css') }} ">
+
+
+
+
+<div class="container heading ">
+
+    <div class="d-flex flex-row" style="justify-content: center;">
+        <h2>Manage Products</h2>
+    </div>
+    <div class="d-flex flex-row-reverse borders">
+        <button class="btn btn-primary" id="add_product" onclick="add_products_page()">Add Products</button>
+    </div>
+
+
+
+    <div class="d-flex flex-row white_card ">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Item</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Unit</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in data %}
+                <tr>
+                    <td> {{i['product_id']}} </td>
+                    <td> {{i['product_name']}} </td>
+                    <td> {{i['price']}} </td>
+                    <td> {{i['unit_name']}} </td>
+                    <td> <button class="btn btn-danger" onclick="delete_entry({{ i['product_id'] }})">Delete</button>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script src="../static/javascript/manage_products.js"></script>
+
+{% endblock %}

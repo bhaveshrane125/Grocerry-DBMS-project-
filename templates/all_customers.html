@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block links %}
+    <a href="/">Home</a>
+    <a href="/manage_products">Manage Product</a>
+    <a href="/create_order">Order</a>
+{% endblock %}
+
+
+{% block body %}
+<link rel="stylesheet" href="../static/css/all_customers.css">
+<!-- 
+    {% for i in data %}
+        <p> {{i}} </p>
+    {% endfor %} -->
+<div class="container black_card">
+
+    <h2>All Customers</h2>
+    
+    <div class="white_card">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Phone</th>
+                    <th>Name</th>
+                    <th>Total Spent</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in data %}
+                <tr>
+                    <td> {{i['customer_phone']}} </td>
+                    <td> {{i['customer_name']}} </td>
+                    <td> {{i['total']}} </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+
+        </table>
+
+    </div>
+</div>
+{% endblock %}

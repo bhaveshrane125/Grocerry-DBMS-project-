@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+
+
+
+{% block body %}
+    <link rel="stylesheet" href="../static/css/home_page.css">
+
+ 
+    <div class="container black_card">
+        <div class="heading">
+
+            <h1> Grocery Management </h1>
+        </div>
+        <div class="container white_card">
+
+            <div class="row sub">
+                <div id="manage_products_btn" class="col ">
+                    <button class="btn btn-transparent" > Manage Products </button>
+                </div>
+                
+                <div id="orders_btn" class="col ">
+                    <button class="btn btn-transparent"  > Create Order </button>
+                </div>
+
+            </div>
+            
+
+            <div class="row">
+
+                <div id="all_customers_btn" class="col sub1">
+                    <button class="btn btn-transparent" > All Customers </button>
+                </div>
+
+                <div id="order_details_btn" class="col sub1">
+                    <button class="btn btn-transparent">Order Details</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
+
+{% block scripts %}
+<script src="../static/javascript/home.js"></script>
+
+{% endblock %}
